@@ -1,0 +1,508 @@
+ @import 'https://fonts.googleapis.com/css?family=Gochi+Hand|Lobster|Pacifico';
+
+body {
+    background: #eeeeee;
+    font-family: 'Proxima Nova Rg';
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.header {
+    padding: 20px 0px;
+    background: #0E94F7;
+}
+
+.hero {
+    background: url(../images/hero.jpg);
+    background-size: cover;
+    height: 100%;
+    background-position: 0;
+    padding-top: 40px;
+    box-shadow: 0px 1px 6px 0px #7d7d7d inset;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+}
+
+h1 {
+    margin: 0;
+    color: #0E94F7;
+    font-weight: 200;
+    font-size: 2.4em;
+    padding-top: 20px;
+    font-family: 'Proxima Nova Lt';
+}
+
+h2 {
+    color: #767676;
+    font-weight: 209;
+    font-size: 1.8em;
+    margin: 30px 0px;
+    font-weight: 200;
+    font-family: 'Proxima Nova Lt';
+}
+
+.hero p {
+    font-size: 1.8em;
+    line-height: 2em;
+    color: white;
+    font-weight: 200;
+    letter-spacing: 1px;
+    padding-left: 20px;
+    margin-top: -8px;
+    margin-left: 20%;
+    text-shadow: 1px 1px 1px #000;
+    font-family: 'Proxima Nova Lt';
+}
+
+button h3 {
+    font-weight: 400;
+    margin: 0;
+    font-size: 18px;
+}
+
+button p {
+    font-weight: 200;
+    margin: 0;
+    font-size: 14px;
+    color: #0a5183;
+    margin-top: 10px;
+    font-family: 'Proxima Nova Lt';
+}
+
+.container {
+    padding: 0;
+}
+
+button {
+    background: transparent;
+    border: none;
+    color: #FFFFFF;
+    width: 100%;
+    border-bottom: 1px solid #0489c5;
+    font-size: 1.4em;
+    position: relative;
+    transition: background-color 0.2s ease-in-out;
+    text-align: left;
+    padding-left: 90px;
+    box-shadow: 0px 1px 1px -1px #42b9f2;
+    height: 14.9%;
+}
+
+button:hover {
+    background: #0E7CF7;
+    color: #FFFFFF;
+}
+
+.getresult {
+    background: #0E94F7;
+    text-align: center;
+    margin: 50px 0px 0px 0px;
+    padding: 16px 0px;
+    border-bottom: 1px solid #2382c8;
+    box-shadow: 0px 1px 1px #0E94F7;
+}
+
+.getresult:hover {
+    background: #36aff5;
+    box-shadow: none: border: none;
+}
+
+.ng-hide-add,
+.ng-hide-remove {
+    /* ensure visibility during the transition */
+    display: block !important;
+    /* yes, important */
+}
+
+.active {
+    background: #0E7CF7;
+    fill: red;
+}
+
+.cssFade {
+    -webkit-transition: all linear 0.3s;
+    transition: all linear 0.3s;
+    opacity: 1;
+    position: relative;
+}
+
+.cssFade.ng-hide {
+    opacity: 0;
+}
+
+.cssFade.ng-hide-remove {
+    -webkit-transition-delay: .3s;
+    transition-delay: .3s;
+}
+
+button svg {
+    width: 100%;
+    height: 100%;
+    fill: #FFFFFF;
+}
+
+.active svg  {
+    fill: #0AE791;
+}
+
+button:hover svg {
+    fill: #0AE791;
+}
+
+path { transition: fill .4s ease; }
+
+img.logo {
+    top: 0;
+    right: 0;
+    width: 60%;
+    margin: 11% 20%;
+}
+
+.logohold {
+    background: #0E94F7;
+}
+
+.circle {
+    width: 80px;
+    height: 100%;
+    background: rgba(19, 114, 184, 0.4);
+    padding: 22px;
+    position: absolute;
+    top: 0px;
+    left: 0;
+}
+
+.citypage .circle {
+    position: initial;
+    width: 120px;
+    height: 120px;
+}
+
+.citypage svg, .supplierpage svg, .countrypage svg, .airportpage svg, .regionpage svg {
+    width: 90px;
+    fill: #0E7CF7;
+    padding: 20px;
+    float: right;
+}
+
+.selected select {
+    background: transparent;
+    width: 268px;
+    padding: 5px;
+    line-height: 35px;
+    border: 0;
+    border-radius: 0;
+    -webkit-appearance: none;
+    color: #9999A1;
+    padding-left: 0;
+}
+
+.selected {
+    width: 240px;
+    height: 54px;
+    overflow: hidden;
+    background: url(../images/arrowdown.svg) no-repeat top right;
+    color: #FFFFFF;
+    background-size: 6%;
+    background-position: 94% 22px !important;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.andl {
+    margin-left: 20px;
+}
+
+code:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+code title {
+    color: red;
+}
+
+.resultwrap p {
+    font-family: 'Gochi Hand', cursive;
+    font-size: 18px;
+    margin: 0;
+    color: #6f6f6f;
+    margin-bottom: 0px !important;
+}
+
+.resultwrap svg {
+    float: left;
+    width: 28px !important;
+    position: absolute;
+    top: 108px;
+    fill: #6f6f6f;
+    padding: 0;
+    margin-left: 5px;
+
+}
+
+.result img {
+    position: absolute;
+    top: 45px;
+    right: 16px;
+}
+
+option {
+    background: #FFFFFF;
+    color: #333333;
+    padding: 5px 8px;
+}
+
+.selected:hover {
+    background-color: #F8F8F8;
+}
+
+.autocomplete input,
+.maininput {
+    height: 46px;
+    width: 100%;
+    padding: 0 10px;
+}
+
+label p {
+    float: left;
+    padding-right: 20px;
+}
+
+.glenn {
+    width: 10%;
+    animation: pulse 3s ease infinite alternate, nudge 5s linear infinite alternate;
+    position: relative;
+}
+
+#sidebar {
+    width: 20%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    min-height: 100%;
+    overflow-x: scroll;
+}
+
+.search {
+    background: #0e7cf7;
+    padding: 12.8%;
+    -webkit-box-shadow: 0px 0px 5px -3px #000 inset !important;
+     -moz-box-shadow: 0px 0px 5px -3px #000 inset !important;
+     box-shadow: 0px 0px 5px -3px #000 inset !important;
+    font-size: 1.6em;
+    color: white;
+    letter-spacing: 1px;
+    fill: #FFFFFF;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0)
+{
+.search {
+    -webkit-box-shadow: -1px 1px 6px 1px #0766cf inset !important;
+    -box-shadow: -1px 1px 6px 1px #0766cf inset !important;
+}
+}
+
+
+
+.search a {
+    font-weight: 200 !important;
+    font-family: 'Proxima Nova Lt';
+}
+
+.searchmove:hover {
+    color: #0AE791 !important;
+    fill: #0AE791 !important;
+}
+
+.searchmove a:hover {
+    color: #0AE791 !important;
+    text-decoration: none;
+    fill: #0AE791 !important;
+}
+
+.cardcontent p {
+    margin: 20px 0px;
+}
+
+.sidegrad {
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#c2e59c+23,03a9f4+78 */
+    background: #0288d1;
+    /* Old browsers */
+    background: -moz-linear-gradient(-25deg, #0E94F7 36%, #f4a763 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(-25deg, #0E94F7 36%, #f4a763 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, #0E94F7 36%, #f4a763 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr=' #0E94F7', endColorstr='#f4a763', GradientType=1);
+    /* IE6-9 fallback on horizontal gradient */
+}
+
+.headtry {
+    background: #FFFFFF;
+    height: 111px;
+    width: 80%;
+    margin-left: 20%;
+    padding-left: 40px;
+    padding-top: 15px;
+}
+
+.citypage,
+.countrypage,
+.airportpage,
+.supplierpage,
+.regionpage {
+    background: white;
+    margin: 5%;
+    border-radius: 4px;
+    box-shadow: 0px 2px 2px #ccc;
+}
+
+.cardhead {
+    background: #F8F8F8;
+    height: 100px;
+    padding: 1% 5%;
+    box-shadow: 0px -1px 0px #eee inset;
+}
+
+.cardcontent {
+    padding: 2% 5%;
+}
+
+input[type="radio"], input[type="checkbox"] {
+    margin: 24px 0 0;
+}
+
+#prev {
+    width: 20%;
+    margin-right: 10px;
+    position: relative;
+    top: 5px;
+    height: 34px;
+}
+
+#wrapper {
+    background: #eeeeee;
+    width: 80%;
+    overflow: auto;
+    height: 100%;
+    margin-left: 20%;
+    margin-top: 100px;
+}
+
+.home {
+    padding-left: 20%;
+}
+
+.result {
+    padding-top: 30px;
+}
+
+.resultwrap {
+    width: 100%;
+    background: #F9F2F4;
+    padding: 4%;
+}
+
+.form-control {
+    height: 46px;
+}
+
+@keyframes pulse {
+    0% {
+        top: 0px;
+    }
+    50% {
+        top: 10px;
+    }
+    100% {
+        top: 0px;
+    }
+}
+
+@media (max-height: 900px) {
+    button {
+        height: 14.8%;
+    }
+}
+
+@media (max-height: 800px) {
+    button {
+        height: 15.6%;
+    }
+    .search {
+        padding: 6.8%;
+    }
+    img.logo {
+        margin: 7% 20%;
+    }
+}
+
+@media (max-height: 700px) {
+    button {
+        height: 17.3%;
+    }
+    .search, button p {
+        display: none;
+    }
+    img.logo {
+        margin: 7% 20%;
+    }
+}
+
+@media (max-width: 930px) {
+    button p {
+        display: none;
+    }
+    button h3 {
+    font-weight: 400;
+    font-size: 16px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+    .circle {
+        width: 100%;
+    }
+    button {
+        padding: 0;
+    }
+    button svg {
+        width: 60%;
+        margin: 0 20%;
+    }
+}
+
+
+@media (max-width: 480px) {
+    #wrapper {
+        width: 100%;
+        margin: 0;
+        margin-top: 194px;
+    }
+    #sidebar {
+        width: 100%;
+        height: 30%;
+    }
+    button {
+        width: 100%;
+        height: 16%;
+    }
+    .logohold {
+        display: none;
+    }
+    .search {
+        padding: 2%;
+        padding-left: 0;
+    }
+    button h3 {
+        bottom: 14px;
+    }
+}

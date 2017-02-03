@@ -1,0 +1,66 @@
+<div id="wrapper" class="cssFade" ng-show="!selectedButton || selectedButton === 3">
+                <div class="airportpage ng-scope">
+                    <div class="cardhead">
+                        <svg id="Capa_1" version="1.1" viewbox="0 0 485.794 485.794" x="0px" xmlns="http://www.w3.org/2000/svg" y="0px" enable-background="new 0 0 485.794 485.794">
+                                <g>
+                                    <path d="M15.8 404.4h460v20h-460zM468.8 89.3c-33.4-19.5-71.3-9-97.3 3l-77.4 36-133-67L81.8 65l110 111.4-70 33.3-73-27.7L0 204.5l44 54.8c-4.6 5.5-8.8 13.4-5 21.6 5 10.6 19.8 16 44 16 5 0 10.5-.2 16.2-.7 26.7-2 55.5-9 73.6-17.3l276.6-129c24-11 35.8-22.8 36.4-35.7.3-6.7-2.4-16.5-17-25zm-28 42.6L164.4 261c-15.3 7-40.6 13-64.3 15.2-24.2 2.2-37.2-.6-41.5-3 1-1 2.5-3 5.6-5.7l7.3-6.3L31.6 212l18-8.5 73 27.7 103-49-98-99.3 29-1.4 137.2 69 86.2-40.2c31.4-14.7 58-16 78.8-3.8 5.2 3 7 5.7 7 6.8 0 0-.6 7.2-25 18.5z" />
+                                </g>
+                            </svg>
+                            <h2>Build your Airport Page Link</h2>
+                    </div>
+                    <div class="cardcontent">
+                        <p>Choose your Airport</p>
+                        <div angucomplete-alt id="ex6" placeholder="Search Airports" pause="100" selected-object="selectedCountry6" local-data="iatas" search-fields="name,code" title-field="name" description-field="code" minlength="1" input-class="form-control form-control-small" match-class="highlight">
+                        </div>
+                        <p>Choose your Country</p>
+                        <div angucomplete-alt id="ex7" placeholder="Search countries" pause="100" selected-object="selectedCountry7" local-data="cors" search-fields="name,code" title-field="name" description-field="code" minlength="1" input-class="form-control form-control-small" match-class="highlight" image-field="pic">
+                        </div>
+                        <!--div class="" ng-show="selectedCountry6">
+                You selected <span class="bold-span">{{selectedCountry6.title}}</span> which has a country code of <span class="bold-span">{{selectedCountry6.description}}</span>
+            </div-->
+                        <p>Enter Your affiliate Code</p>
+                        <input class="maininput" ng-model="affCode" data="affCode" placeholder="Enter your affiliate code"></input>
+                        <p>Choose your language</p>
+                        <div class="selected">
+                            <select ng-options="lang.id as lang.name for lang in langs" ng-model="lang" data="langs" ng-model-options="{ debounce: 100 }">
+                                <option style="display:none" value="">Select your language</option>
+                            </select>
+                        </div>
+                        <br>
+                          <label>
+                            <p>Apply a sub-domain?</p>
+                            <input type="checkbox" ng-model="checkedsub3" ng-init="checked=false" />
+                        </label>
+                        <label class="andl">
+                            <p>Apply Affiliate Tracking</p>
+                            <input type="checkbox" ng-model="checkedtrack3" ng-init="checked=false" />
+                        </label>
+                        <br/>
+                         <span ng-show="checkedsub3" class="cssFade">
+                            <p>Enter Your Sub-domain</p>
+                            <input class="maininput" ng-model="affUrl" data="affUrl"></input>
+                        </span>
+                        <span ng-show="checkedtrack3" class="cssFade">
+                            <p>Enter Your Adcamp Code</p>
+                            <input class="maininput" ng-model="adCamp" data="adCamp"></input>
+                            <p>Enter Your Adplat Code</p>
+                            <input class="maininput" ng-model="adPlat" data="adPlat"></input>
+                        </span>
+                        <div class="result cssFade" ng-show="resultairport">
+                         <div class="resultwrap" onclick="myFunction()">
+                             <code 
+                            ng-copyable 
+                            data-placement="left"
+                            title="Click to copy to your clipboard"
+                            onmouseenter="$(this)('show')">http://{{affUrl !== "" ? affUrl : "www.rentalcars.com"}}/AirportLandingPage.do?countryCode={{selectedCountry7.description}}&iata={{selectedCountry6.description}}&affiliateCode={{affCode}}&preflang={{lang}}<span ng-show="adCamp">&adcamp={{adCamp}}</span><span ng-show="adPlat">&adplat={{adPlat}}</span></code>
+                            <p>click the link to copy 
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 337.782 337.782">
+                                <path d="M202.97 0l-99.44 130.824h52.214c8.63 89.9-25.768 176.225-120.373 206.957 121.698.34 190.642-99.895 213.968-206.956h53.072L202.97 0z"/>
+                                </svg>
+                            </p>
+                        </div>
+                    </div>
+                    </div>
+                    <button class="getresult" type="button" ng-click="resultairport=true">get</button>
+                </div>
+            </div>
